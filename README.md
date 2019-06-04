@@ -16,7 +16,7 @@ Website: [matrixservers.net](https://matrixservers.net)
 - The server must be compliant to acceptable laws.
 - The server must be actively maintained.
 - The server must be stable and in production.  
-- Create an issue with the [Add server](https://github.com/Atreatis/matrix-servers/issues/new?assignees=Atreatis&labels=&template=add-server.md&title=%5BADD%5D) issue template.
+- Create an issue with the [Add server](https://github.com/Atreatis/matrixservers/issues/new?assignees=Atreatis&labels=&template=add-server.md&title=%5BADD%5D) issue template.
 
 ## Matrix Server List
 **Server name:** Nova IM  
