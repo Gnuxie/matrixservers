@@ -68,10 +68,10 @@ Website: [matrixservers.net](https://matrixservers.net)
 **Web client:** https://riot.im/app  
 **Description:** The first ever Matrix server, as run by the matrix.org core dev team.  Can get overloaded.  
 
-**Server name:** matrix.bau-ha.us
-**Domain:** bau-ha.us
-**Maintainer:** mt:bau-ha.us
-**Founded:** 2018
-**Web client:** matrix.bau-ha.us (Riot)
-**Description:** Synapse with workers, TURN-Server (UDP), Telegram-Bridge, XMPP-Bridge, hostet at Uni-Weimar by student run Hackspace (maschinenraum.tk), dedicated server,
-**Support:** #meta:bau-ha.us
+**Server name:** matrix.bau-ha.us  
+**Domain:** bau-ha.us  
+**Maintainer:** mt:bau-ha.us  
+**Founded:** 2018  
+**Web client:** matrix.bau-ha.us (Riot)  
+**Description:** Synapse with workers, TURN-Server (UDP), Telegram-Bridge, XMPP-Bridge, hostet at Uni-Weimar by student run Hackspace (maschinenraum.tk), dedicated server,  
+**Support:** #meta:bau-ha.us  
