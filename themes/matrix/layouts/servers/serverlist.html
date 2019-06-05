@@ -3,6 +3,8 @@
   <div class="col-md-10 ml-auto mr-auto text-left">
   {{ .Content }}
     <br>
+    {{ partial "featured" . }}
+    <br>
     <h3>Public Matrix Server List</h3>
   {{ partial "servers" }}
   </div>
