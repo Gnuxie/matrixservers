@@ -6,7 +6,7 @@
   {{ $random := shuffle $api.data }}
   {{ range first 1 $random  }}
   <div class="card-body">
-      <h4 class="card-title">{{ .domain }}</h4>
+    <h4 class="card-title">{{ .domain }}</h4>
     <p class="card-text">{{ .description }}</p>
     <a href="https://{{ .domain }}" class="btn btn-primary" target="_blank">Visit Website</a>
     {{ end }}
