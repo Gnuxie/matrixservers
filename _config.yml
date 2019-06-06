@@ -36,7 +36,7 @@ plugins:
   - jekyll-redirect-from
   - jekyll-autoprefixer
   - jekyll-minifier
-  - jekyll-strapi
+  #- jekyll-strapi
 
 strapi:
     # Your API endpoint (optional, default to http://localhost:1337)
