@@ -60,12 +60,7 @@ social:
     - https://twitter.com/Atreatis
     - https://github.com/Atreatis
 
-# lang: en_US
-
-# Nofollow tags
-extlinks:
-   attributes: {rel: nofollow, target: _blank}
-   rel_exclude: ['matrixservers.net']
+lang: en_US
 
 sass:
   sass_dir: _sass
@@ -89,3 +84,8 @@ exclude:
    - vendor/cache/
    - vendor/gems/
    - vendor/ruby/
+   - .travis.yml
+   - deploy_rsa.enc
+   - Rakefile
+   - README.md
+   - LICENSE
