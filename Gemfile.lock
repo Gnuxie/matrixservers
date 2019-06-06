@@ -14,8 +14,6 @@ GEM
     colorize (0.8.1)
     concurrent-ruby (1.1.5)
     cssminify2 (2.0.1)
-    domain_name (0.5.20180417)
-      unf (>= 0.0.5, < 1.0.0)
     em-websocket (0.5.1)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.6.0)
@@ -35,14 +33,6 @@ GEM
       typhoeus (~> 1.3)
       yell (~> 2.0)
     htmlcompressor (0.4.0)
-    http (3.3.0)
-      addressable (~> 2.3)
-      http-cookie (~> 1.0)
-      http-form_data (~> 2.0)
-      http_parser.rb (~> 0.6.0)
-    http-cookie (1.0.3)
-      domain_name (~> 0.5)
-    http-form_data (2.1.1)
     http_parser.rb (0.6.0)
     i18n (0.9.5)
       concurrent-ruby (~> 1.0)
@@ -78,10 +68,6 @@ GEM
       sass (~> 3.4)
     jekyll-seo-tag (2.6.1)
       jekyll (>= 3.3, < 5.0)
-    jekyll-strapi (0.1.2)
-      http (~> 3.2)
-      jekyll (~> 3)
-      json (~> 2.1)
     jekyll-watch (2.2.1)
       listen (~> 3.0)
     json (2.2.0)
@@ -129,9 +115,6 @@ GEM
       thread_safe (~> 0.1)
     uglifier (4.1.20)
       execjs (>= 0.3.0, < 3)
-    unf (0.1.4)
-      unf_ext
-    unf_ext (0.0.7.6)
     yell (2.2.0)
 
 PLATFORMS
@@ -146,7 +129,6 @@ DEPENDENCIES
   jekyll-minifier
   jekyll-redirect-from
   jekyll-seo-tag
-  jekyll-strapi
   mini_racer
   minima (~> 2.0)
   nokogiri
