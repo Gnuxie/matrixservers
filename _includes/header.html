@@ -1,0 +1,55 @@
+<header>
+  <nav class="navbar navbar-expand-md navbar-light bg-light shadow rounded">
+    <div class="container">
+      <a class="navbar-brand" href="/">
+        <img src="/assets/img/logo.png" width="30" height="30" class="d-inline-block align-top" alt="{{ .site.title }}">
+        {{ .site.title }}
+      </a>
+      <button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle Navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navigation">
+        <ul class="navbar-nav ml-auto">
+          {% assign links = site.data.navigation %}
+          {% for link in links %}
+            {% assign class = nil %}
+            {% if page.url contains link.url %}
+              {% assign class = 'active' %}
+            {% endif %}
+            {% if link.sublinks %}
+              <li class="nav-item dropdown {{ class }}">
+                <a class="nav-link" href="{{ site.url }}{{ site.baseurl }}{{ link.url }}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ link.title }} <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  {% for sublink in link.sublinks %}
+                    {% if sublink.title == 'separator' %}
+                      <li role="separator" class="divider"></li>
+                    {% else %}
+                      <li>
+                        <a class="nav-link" href="{{ site.url }}{{ site.baseurl }}{{ sublink.url }}">{{ sublink.title }}</a>
+                      </li>
+                    {% endif %}
+                  {% endfor %}
+                </ul>
+              </li>
+            {% else %}
+              <li class="nav-item {{ class }}">
+                <a class="nav-link" href="{{ site.url }}{{ site.baseurl }}{{ link.url }}">{{ link.title }}</a>
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+  </nav>
+
+    <div class="block shadow rounded" style="background-image: url('/assets/img/header.jpg');">
+      <div class="block-img-overlay">
+        <div class="container text-center">
+          <div class="col-md-8 p-lg-5 mx-auto my-5">
+            <h1>{{ page.title }}</h1>
+            <h3>{{ page.description }}</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+</header>

@@ -1,2 +1,3 @@
-**/_gen
-public
+_site
+.sass-cache
+.jekyll-metadata

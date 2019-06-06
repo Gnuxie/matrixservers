@@ -1,15 +1,24 @@
-dist: xenial
-sudo: required
-language: node_js
-node_js:
-- lts/*
-install:
-- wget "https://github.com/gohugoio/hugo/releases/download/v${HUGO_RELEASE}/hugo_extended_${HUGO_RELEASE}_Linux-64bit.deb"
-- sudo dpkg -i hugo*.deb
+language: ruby
+rvm:
+- 2.4
+env:
+  global:
+
+env:
+  global:
+  - PRODUCTION=true
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
+  - JEKYLL_ENV="production"
+  - secure: Xi5/1Xt4qV9z59RvYPKYROT7YCJKakxQ30CkE6ILuI7aO8lqV4CzFBAX1o9V2Axjc9hv/SxGro7hrdbyjw9FqEbaINCrbJ1z/6HbTzGY9EbRBhEVE8v0HcJghW9MkuoInSBVbVlmcfOeIBu2yBhnX8YQP3dNmg1UwjAccMuDWqoXr0b7u2STEZOtQYD3eJ3DcXCym4ccBO6pldJbceqWj/PLx4IyWcbNy5+ZDnxRA1PRwnz7bkZL465C4Zx9wA5WWmRQ/Dntv5xsCfcNcR3sSFRCa/2c0Z0753V3DwKGFZEGI/IozvIPzHj4XmHisQeyafGRlgtxhdbOJWT7W/nlxBWffTkAAQmPsvIoJC4igL9iAE2a0M9rI4XZojwj1XzseUL8MlFFxlFiHEv4M+XaHDli4D02hIvJgLOhpbIbLPG4dkN2ufOf+OXn4wDvtM627kgwDh5oV66FLtip1CgJOvqX4Xog4p/dYV3BP6S1BcUysgMO7DVaq3XNOvAMW3tfTmaGg2vt8WSZCWWSD0b9mwaNcq55jpdueenQ+WuvvjGYElQuBY7/ClDb0yI2AKXM8SU+Zsm7Eq3ugxVAiJ8lZT2i7kx8gaVzoaLf1TUrmbcBD8BbgFdh0RgHgWEmIeSpYV9g7yoa3MQl5DH2vMxLHQB+8QhZGjWBPu46qhADngI=
+  - secure: l0nW5Jmc8ItQZ/s8ZkYwboe/fy6rX1lhIJeVV+4xYoS1hB6P0rIMFqU2ajLuwgD+1XHOn2KKyG1G837fclQtJVmVMVLB4kZvRXhFPcMOsBqnzhtio50i23d577jWcNlWqXYwYKO7YQGkzWXUK0XcizBUPbxbZaxSb9P6gSDpZvbd9lTQnCJi4Tvnqrmf7IwC2kX9yYAoxodjn3fXzihjrT2Q93pdzXlFkUL/NHsgZ7kEz7duoLWWjMx9uKGZ7tavyhimeQP8lVyxu1cvOhHbNKbed/vZS/5XwBJRDEW8JpqOUEy380Fi1Pq8myOJXCSTGLOTgqGjl0lC5/EvkqNcee+f+4xxxFJD6VhwPQvFML5m6xfYhvCFxzGaqeuyYF+C+LpEABBXLKBfT5N35b3ta5LK4qGXfsk6/w/ZKa2ppSCV8s/9CzG+P3bHM8X/sYDvzNLbfVSYKMCaK7YpJFcNzyI2ahHYm1X61EYCKaafw9Idy+huXqVKcKGA59cTJIlTZ/BiCAplhF2ATZzHRsjSkGVlfqsr9ap3bsArkLIcwqZ/4TBIKVb8qKVzUPuepviX1kKPg9+8kWvwbQaGB5sJzvzOqGr2d5LyhBDawNe+uCZdlYWz7OKUaCpw5DX5ebC6lMeQsTckqyz8BrPv5OeLWLNAlkDgqWMxpibdCoAcnSI=
+  - secure: CREjP0otJQmAcsaBzhediLKVuutMrqOg7bzGyv4m3j7ogyU3U3o9C1T8V9fSOb5d1R81MatjomnI8o0Ow2JPYm5gxH1QMbJk/nD5dPrXgXzbPeR57sz4RzeaxePJlcByqSbuY5uc7MmWf/Gz7i238jIxs+0phII0joD4dSl1KayEtp2rrQQmJb5yr5xy/yge0yHlNq4hnQY2Mhtcy/rqawp3c5BqBFFAPzuSbjn6RMYdKABpv//9Fg8YHtbaJgd3ncpHIUQbsiPuxHWb194gmqtN0zFU6bRyUJN9hkA0s4kCJ8HKm8TGAyOsngba9xPuMtg7mVnhfA6hEwy3Lit67mGxj5I+9CzIYqT+YA9bO5T8AGEI9JsgOqBEKQp6rVSc21zTay1EzUeWNV96O+bY4eoQzRQlb+BaYa8BEED8eTEYqbtOFl8odDmrpnhUHGskaZx23mEFyzLt5VLStC7fMnEfKPrRrg5z+Fir2dKXMRNPuYN7LqE9I4s2sgqsvxXuWrpHM2XBzq82qu6a06iTqEEC5azs7B+617EQL3E9G9n9reL9iKwzF5582+Vf0LD8FuLf+bqHK4/a4NhCmr42zOh5e2TSu7Pm6CCU6+bfdoPQPk/pywdfYjmYkxtYxcavPFl1iohfjnV2zE+2ezipEyVhCapv1y76P30fCMlXnkQ=
+branches:
+  only:
+  - master
 script:
-- hugo version
-- hugo --minify
-before_install:
+  - bundle exec jekyll build
+  - bundle exec rake test
+before_deploy:
 - openssl aes-256-cbc -K $encrypted_a77e66116c83_key -iv $encrypted_a77e66116c83_iv
   -in deploy_rsa.enc -out /tmp/deploy_rsa -d
 - eval "$(ssh-agent -s)"
@@ -19,14 +28,7 @@ before_install:
 - echo -e "Port 7685" >> ~/.ssh/config
 deploy:
   provider: script
-  skip-cleanup: true
-  script: rsync -r --quiet --delete-after ${TRAVIS_BUILD_DIR}/public/* ${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_DIRECTORY}
+  skip_cleanup: true
+  script: rsync -r --quiet --delete-after _site/* $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_DIRECTORY
   on:
     branch: master
-env:
-  global:
-  - PRODUCTION=true
-  - HUGO_RELEASE=0.55.6
-  - secure: Xi5/1Xt4qV9z59RvYPKYROT7YCJKakxQ30CkE6ILuI7aO8lqV4CzFBAX1o9V2Axjc9hv/SxGro7hrdbyjw9FqEbaINCrbJ1z/6HbTzGY9EbRBhEVE8v0HcJghW9MkuoInSBVbVlmcfOeIBu2yBhnX8YQP3dNmg1UwjAccMuDWqoXr0b7u2STEZOtQYD3eJ3DcXCym4ccBO6pldJbceqWj/PLx4IyWcbNy5+ZDnxRA1PRwnz7bkZL465C4Zx9wA5WWmRQ/Dntv5xsCfcNcR3sSFRCa/2c0Z0753V3DwKGFZEGI/IozvIPzHj4XmHisQeyafGRlgtxhdbOJWT7W/nlxBWffTkAAQmPsvIoJC4igL9iAE2a0M9rI4XZojwj1XzseUL8MlFFxlFiHEv4M+XaHDli4D02hIvJgLOhpbIbLPG4dkN2ufOf+OXn4wDvtM627kgwDh5oV66FLtip1CgJOvqX4Xog4p/dYV3BP6S1BcUysgMO7DVaq3XNOvAMW3tfTmaGg2vt8WSZCWWSD0b9mwaNcq55jpdueenQ+WuvvjGYElQuBY7/ClDb0yI2AKXM8SU+Zsm7Eq3ugxVAiJ8lZT2i7kx8gaVzoaLf1TUrmbcBD8BbgFdh0RgHgWEmIeSpYV9g7yoa3MQl5DH2vMxLHQB+8QhZGjWBPu46qhADngI=
-  - secure: l0nW5Jmc8ItQZ/s8ZkYwboe/fy6rX1lhIJeVV+4xYoS1hB6P0rIMFqU2ajLuwgD+1XHOn2KKyG1G837fclQtJVmVMVLB4kZvRXhFPcMOsBqnzhtio50i23d577jWcNlWqXYwYKO7YQGkzWXUK0XcizBUPbxbZaxSb9P6gSDpZvbd9lTQnCJi4Tvnqrmf7IwC2kX9yYAoxodjn3fXzihjrT2Q93pdzXlFkUL/NHsgZ7kEz7duoLWWjMx9uKGZ7tavyhimeQP8lVyxu1cvOhHbNKbed/vZS/5XwBJRDEW8JpqOUEy380Fi1Pq8myOJXCSTGLOTgqGjl0lC5/EvkqNcee+f+4xxxFJD6VhwPQvFML5m6xfYhvCFxzGaqeuyYF+C+LpEABBXLKBfT5N35b3ta5LK4qGXfsk6/w/ZKa2ppSCV8s/9CzG+P3bHM8X/sYDvzNLbfVSYKMCaK7YpJFcNzyI2ahHYm1X61EYCKaafw9Idy+huXqVKcKGA59cTJIlTZ/BiCAplhF2ATZzHRsjSkGVlfqsr9ap3bsArkLIcwqZ/4TBIKVb8qKVzUPuepviX1kKPg9+8kWvwbQaGB5sJzvzOqGr2d5LyhBDawNe+uCZdlYWz7OKUaCpw5DX5ebC6lMeQsTckqyz8BrPv5OeLWLNAlkDgqWMxpibdCoAcnSI=
-  - secure: CREjP0otJQmAcsaBzhediLKVuutMrqOg7bzGyv4m3j7ogyU3U3o9C1T8V9fSOb5d1R81MatjomnI8o0Ow2JPYm5gxH1QMbJk/nD5dPrXgXzbPeR57sz4RzeaxePJlcByqSbuY5uc7MmWf/Gz7i238jIxs+0phII0joD4dSl1KayEtp2rrQQmJb5yr5xy/yge0yHlNq4hnQY2Mhtcy/rqawp3c5BqBFFAPzuSbjn6RMYdKABpv//9Fg8YHtbaJgd3ncpHIUQbsiPuxHWb194gmqtN0zFU6bRyUJN9hkA0s4kCJ8HKm8TGAyOsngba9xPuMtg7mVnhfA6hEwy3Lit67mGxj5I+9CzIYqT+YA9bO5T8AGEI9JsgOqBEKQp6rVSc21zTay1EzUeWNV96O+bY4eoQzRQlb+BaYa8BEED8eTEYqbtOFl8odDmrpnhUHGskaZx23mEFyzLt5VLStC7fMnEfKPrRrg5z+Fir2dKXMRNPuYN7LqE9I4s2sgqsvxXuWrpHM2XBzq82qu6a06iTqEEC5azs7B+617EQL3E9G9n9reL9iKwzF5582+Vf0LD8FuLf+bqHK4/a4NhCmr42zOh5e2TSu7Pm6CCU6+bfdoPQPk/pywdfYjmYkxtYxcavPFl1iohfjnV2zE+2ezipEyVhCapv1y76P30fCMlXnkQ=

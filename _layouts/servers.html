@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+  <body>
+    {%  include header.html %}
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-md-12">
+          {{ content }}
+
+          <div class="row">
+            {% assign featured = strapi.collections.servers | sample:2 %}
+            {%- for feature in featured -%}
+            <div class="col-sm-6">
+              <div class="card">
+                <div class="card-header">
+                  Servers of the day
+                </div>
+                <div class="card-body">
+                  <h4 class="card-title">{{ feature.name }}</h4>
+                  <p class="card-text">{{ feature.description | truncate: 125 }}</p>
+                  <a href="https://{{ feature.domain }}" class="btn btn-primary" target="_blank">Visit Website</a>
+                </div>
+              </div>
+            </div>
+            {%- endfor -%}
+          </div>
+          <br>
+
+          <table class="table table-responsive-md">
+            <thead>
+              <tr>
+                <th scope="col">Server</th>
+                <th scope="col">Uptime</th>
+                <th scope="col">Maintainer</th>
+                <th scope="col">Support</th>
+                <th scope="col">Description</th>
+              </tr>
+            </thead>
+            {% assign servers = strapi.collections.servers | sample:100 %}
+            {%- for server in servers -%}
+            <tbody>
+              <tr>
+                <td>{{ server.domain }}</td>
+                <td><a href="https://stats.matrixservers.net/service/{{ server.domain }}" target="_blank" rel="nofollow">Stats</a></td>
+                <td><a href="https://matrix.to/#/{{ server.maintainer }}" target="_blank" rel="nofollow">Contact</td>
+                <td><a href="https://matrix.to/#/{{ server.support }}" target="_blank" rel="nofollow">Support</td>
+                <td>{{ server.description }}</td>
+              </tr>
+            </tbody>
+            {%- endfor -%}
+          </table>
+        </div>
+      </div>
+    </div>
+    {% include footer.html %}
+    {% include javascript.html %}
+  </body>
+</html>

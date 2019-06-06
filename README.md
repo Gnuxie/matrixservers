@@ -24,26 +24,26 @@ Website: [matrixservers.net](https://matrixservers.net)
 **Maintainer:** @atreatis:novaim.com  
 **Founded:** 24-05-2019  
 **Web client:** [nvaim.com](https://nvaim.com)  
-**Description:** Nova IM is a matrix server with the intention to run as long as possible and bring the focus on helping the network on decentralization.
+**Description:** Nova IM is a matrix server with the intention to run as long as possible and bring the focus on helping the network on decentralization.  
 
 **Server name:** Perth Chat  
 **Domain:** https://perthchat.org  
 **Maintainer:** @PC-Admin:perthchat.org  
 **Founded:** 11-09-2017  
-**Description:** Perths run matrix server, currently hosted in Singapore. It has a 25MB file size limit and no google captcha.
+**Description:** Perths run matrix server, currently hosted in Singapore. It has a 25MB file size limit and no google captcha.  
 
 **Server name:** Beerfactory  
 **Domain:** https://beerfactory.org/  
 **Maintainer:** @nico:beerfactory.org  
 **Founded:** about a year ago  
-**Web client:** https://matrix.beerfactory.org/  
+**Web client:** [matrix.beerfactory.com](https://matrix.beerfactory.org/)  
 **Description:** Self hosted public Matrix server.  
 
 **Server name:** FNA  
 **Domain:** https://feneas.org  
 **Maintainer:** @jaywink:federator.dev  
 **Founded:** 2018  
-**Web client:** https://chat.feneas.org  
+**Web client:** [chat.feneas.org](https://chat.feneas.org)  
 **Description:** Federated Networks Association is a non-profit volunteer organization that aims to spread knowledge about federated web projects and help people and projects involved in this area. The Matrix server we run is funded from the association funds.  
 
 **Server name:** ENCOM  
@@ -51,27 +51,34 @@ Website: [matrixservers.net](https://matrixservers.net)
 **Maintainer:** @bhat:encom.eu.org  
 **Support:** #status:encom.eu.org  
 **Founded:** May 28, 2018  
-**Web client:** None. Riot.im works just fine. Duh.  
+**Web client:** None. [Riot.im](https://riot.im/) works just fine. Duh.  
 **Description:** A general purpose Matrix homeserver hosted in Los Angeles, CA. It is intended to be an alternative method for circumventing Internet censorship in certain states and promote the free spread of knowledge. No reCAPTCHA or email verification required.  
 
 **Server name:** Pixietown  
 **Domain:** https://pixie.town  
 **Maintainer:** @f0x:pixie.town  
 **Founded:** May 31st 2019  
-**Web client:** https://neo.pixie.town/app  
+**Web client:** [neo.pixie.town/app](https://neo.pixie.town/app)  
 **Description:** Semi-public Matrix server part of the https://pixie.town services. For an account contact f0x or email f at 0x52 dot eu  
 
 **Server name:** Matrix.org  
 **Domain:** https://matrix.org  
 **Maintainer:** @matthew:matrix.org  
 **Founded:** Aug 13th 2014  
-**Web client:** https://riot.im/app  
+**Web client:** [https://riot.im/app](https://riot.im/app)  
 **Description:** The first ever Matrix server, as run by the matrix.org core dev team.  Can get overloaded.  
 
 **Server name:** matrix.bau-ha.us  
 **Domain:** bau-ha.us  
 **Maintainer:** mt:bau-ha.us  
 **Founded:** 2018  
-**Web client:** matrix.bau-ha.us (Riot)  
-**Description:** Synapse with workers, TURN-Server (UDP), Telegram-Bridge, XMPP-Bridge, hostet at Uni-Weimar by student run Hackspace (maschinenraum.tk), dedicated server,  
+**Web client:** [matrix.bau-ha.us](https://matrix.bau-ha.us) (Riot)  
+**Description:** Synapse with workers, TURN-Server (UDP), Telegram-Bridge, XMPP-Bridge, hosted at Uni-Weimar by student run Hackspace (maschinenraum.tk), dedicated server,  
 **Support:** #meta:bau-ha.us  
+
+**Server name:** matrix.grin.hu  
+**Domain:** grin.hu  
+**Maintainer:** @grin:grin.hu  
+**Founded:** 2019-01  
+**Web client:** [riot.grin.hu/](https://riot.grin.hu/)  
+**Description:** One of the various services provided by this suspicious individual. Image limit is 2 MB, captcha active, the server is synapse with workers, unless there's a faster one. Registrations otherwise open. Admin reserves the right to be impolite with impolite people to any extent  
