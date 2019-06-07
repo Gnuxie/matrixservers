@@ -27,7 +27,7 @@ github_username:  Atreatis
 # Build settings
 highlighter: true
 markdown: kramdown
-permalink: pretty
+permalink: /:title/
 
 plugins:
   - jekyll-feed
@@ -36,7 +36,6 @@ plugins:
   - jekyll-redirect-from
   - jekyll-autoprefixer
   - jekyll-minifier
-  #- jekyll-strapi
 
 strapi:
     # Your API endpoint (optional, default to http://localhost:1337)

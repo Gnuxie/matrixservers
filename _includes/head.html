@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="{{'/assets/css/main.css' | prepend: site.baseurl}}">
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | prepend: site.baseurl }}">
 
   <!-- Custom CSS -->
   <style>
@@ -25,7 +25,13 @@
     }
   </style>
 
-  <title>{{ .site.page.title }}</title>
+  <title>
+    {%if page.title %}
+        {{ page.title }}
+    {% else %}
+        {{ site.title }}
+    {% endif %}
+  </title>
 
   {% include favicon.html %}
 

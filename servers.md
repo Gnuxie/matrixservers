@@ -1,9 +1,12 @@
 ---
 layout: servers
-title: Matrix Public Server List
-description: Choose a home server from the list and start chatting with others right away
-meta: Ready to get connected to the matrix network with a public matrix server from the list? Join the federation today
+title: Public Matrix Servers List
+description: Welcome to the public matrix servers list
+meta: Find your new home server with our public matrix servers list and connect to the federated network without a hassle
 author: Atreatis
 ---
-### Chose your home server to connect
-Choosing your home server cannot be done right or wrong and these servers are in random order everyday. Make sure to check for their uptime by clicking on the stats link. Whenever you have a question for the maintainer of the server you can simply click the contact or support link. Also you can join our official channel on Matrix by joining us at [#matrixservers:novaim.com](https://matrix.to/#/#matrixservers:novaim.com).
+### Ready to join the federation?
+These servers are maintained by the community and are ran by volunteers that are part of the matrix.org network. Connecting or joining to any of these public matrix servers hold no guarantee for uptime, maintenance or reliability. More information can be found in our [about us](https://matrixservers.net/about/) which also describes our requirements for servers, moderation and processing. Always make sure to create backups of your recovery keys and have at least a recovery method enabled through email.  
+
+### Featured server of the day
+Featured servers of the day are randomly chosen after 24 hours and hold no additional value apart from being within the spotlights. However you can always check them out and join their support channel and congratulate them and say hello.
